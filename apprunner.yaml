@@ -1,0 +1,13 @@
+version: 1.0
+runtime: python311
+build:
+  commands:
+    build:
+      - python3 -m pip install -r requirements.txt --target /app/vendor
+run:
+  command: python3 -c "import sys; sys.path.insert(0,'/app/vendor'); from streamlit.web.cli import main; sys.argv=['streamlit','run','main.py','--server.port','8080','--server.address','0.0.0.0','--server.headless','true','--server.enableCORS','false']; main()"
+  network:
+    port: 8080
+  env:
+    - name: PYTHONPATH
+      value: "/app/vendor:/app"
