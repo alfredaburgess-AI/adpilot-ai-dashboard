@@ -4,16 +4,6 @@ build:
   commands:
     build:
       - pip3 install -r requirements.txt --target /app/deps
-      - |
-        cat > /app/entrypoint.py << 'ENTRY'
-        import sys
-        sys.path.insert(0, '/app/deps')
-        sys.path.insert(0, '/app')
-        import streamlit.web.cli
-        sys.argv = ['streamlit', 'run', '/app/main.py', '--server.port', '8080', '--server.address', '0.0.0.0', '--server.headless', 'true', '--server.enableCORS', 'false']
-        streamlit.web.cli.main()
-        ENTRY
-      - which python3 && python3 --version
 run:
   command: python3 /app/entrypoint.py
   network:
