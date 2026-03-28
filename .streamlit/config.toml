@@ -15,4 +15,6 @@ enableWebsocketCompression = false
 
 [browser]
 gatherUsageStats = false
-serverAddress = '0.0.0.0'
+# Use the EXACT AWS URL here
+serverAddress = 'j3pzzpju7m.us-east-1.awsapprunner.com'
+serverPort = 443
