@@ -12,6 +12,7 @@ port = 8080
 enableCORS = false
 enableXsrfProtection = false
 enableWebsocketCompression = false
+maxMessageSize = 200
 
 [browser]
 gatherUsageStats = false

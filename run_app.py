@@ -7,5 +7,9 @@ os.environ['PYTHONPATH'] = '/app/deps:/app'
 # Exec into Python module streamlit. Force global.developmentMode to false to avoid AssertionError.
 os.execv(sys.executable, [
     'python3', '-m', 'streamlit', 'run', 'main.py',
-    '--global.developmentMode', 'false'
+    '--global.developmentMode', 'false',
+    '--server.port', '8080',
+    '--server.address', '0.0.0.0',
+    '--server.enableWebsocketCompression', 'false',
+    '--server.enableCORS', 'false'
 ])
