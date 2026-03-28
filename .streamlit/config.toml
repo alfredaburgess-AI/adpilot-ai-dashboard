@@ -11,6 +11,8 @@ headless = true
 port = 8080
 enableCORS = false
 enableXsrfProtection = false
+enableWebsocketCompression = false
 
 [browser]
 gatherUsageStats = false
+serverAddress = '0.0.0.0'

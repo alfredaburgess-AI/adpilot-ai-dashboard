@@ -11,5 +11,6 @@ os.execv(sys.executable, [
     '--server.port', '8080',
     '--server.address', '0.0.0.0',
     '--server.headless', 'true',
-    '--server.enableCORS', 'false'
+    '--server.enableCORS', 'false',
+    '--server.enableWebsocketCompression', 'false'
 ])
