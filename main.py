@@ -1,12 +1,20 @@
-"""
-main.py — AdPilot AI Dashboard (Streamlit).
-
-Run with:
-    streamlit run main.py
-"""
+import os
+os.environ['PLOTLY_RENDERER'] = 'colab'
 
 import time
 import streamlit as st
+
+# ══════════════════════════════════════════════
+#  Page Config & Theme
+# ══════════════════════════════════════════════
+
+st.set_page_config(
+    page_title="AdPilot AI",
+    page_icon="✦",
+    layout="wide",
+    initial_sidebar_state="collapsed",
+)
+
 import pandas as pd
 import plotly.graph_objects as go
 
@@ -26,17 +34,6 @@ from engine import (
     compute_forecast_impact,
     IMPACT_COLORS,
     IMPACT_ICONS,
-)
-
-# ══════════════════════════════════════════════
-#  Page Config & Theme
-# ══════════════════════════════════════════════
-
-st.set_page_config(
-    page_title="AdPilot AI",
-    page_icon="✦",
-    layout="wide",
-    initial_sidebar_state="collapsed",
 )
 
 # ── Custom CSS (dark-theme matching the HTML prototype) ──
