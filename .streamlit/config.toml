@@ -15,8 +15,6 @@ enableXsrfProtection = false
 enableWebsocketCompression = false
 maxMessageSize = 200
 
-[browser]
-gatherUsageStats = false
-# Use the EXACT AWS URL here
-serverAddress = 'j3pzzpju7m.us-east-1.awsapprunner.com'
-serverPort = 443
+# browser.serverAddress and browser.serverPort removed to allow automatic detection
+# [browser]
+# gatherUsageStats = false
