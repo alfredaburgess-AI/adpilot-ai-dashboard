@@ -2,6 +2,6 @@ streamlit==1.32.0
 pandas
 matplotlib
 plotly
+google-generativeai
 folium
 streamlit-folium
-google-generativeai
