@@ -3,7 +3,8 @@ runtime: python311
 build:
   commands:
     build:
-      - pip install -r requirements.txt
+      - pip3 install --upgrade pip
+      - pip3 install -r requirements.txt
 run:
   command: streamlit run main.py --server.port 8080 --server.address 0.0.0.0 --server.enableCORS false --server.enableXsrfProtection false
   network:
